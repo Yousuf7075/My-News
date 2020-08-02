@@ -1,8 +1,9 @@
 package com.example.mynews.network
 
 import android.content.Context
-import com.example.mynews.BuildConfig
+import androidx.databinding.library.BuildConfig
 import com.example.mynews.R
+import com.example.mynews.network.RetrofitAPIFactory.BASE_URL
 import com.example.mynews.utils.AppConstants
 import com.google.gson.GsonBuilder
 import com.ihsanbal.logging.LoggingInterceptor

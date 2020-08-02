@@ -1,13 +1,8 @@
 package com.example.mynews.di.main
 
-import java.lang.annotation.Documented
-import java.lang.annotation.Retention
-
 import javax.inject.Scope
 
-import java.lang.annotation.RetentionPolicy.RUNTIME
-
 @Scope
-@Documented
-@Retention(RUNTIME)
+@MustBeDocumented
+@kotlin.annotation.Retention(AnnotationRetention.RUNTIME)
 annotation class MainScope

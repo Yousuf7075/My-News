@@ -8,13 +8,14 @@ import androidx.core.view.GravityCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.example.mynews.R
+import com.example.mynews.base.BaseActivity
 import com.example.mynews.databinding.ActivityMainBinding
 import com.example.mynews.ui.home.HomeFragment
 import com.example.mynews.ui.science.ScienceFragment
 import com.example.mynews.ui.world.WorldFragment
 import com.google.android.material.navigation.NavigationView
 
-class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
+class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedListener {
 
     private lateinit var mMainBinding: ActivityMainBinding
     private lateinit var toolbar: androidx.appcompat.widget.Toolbar

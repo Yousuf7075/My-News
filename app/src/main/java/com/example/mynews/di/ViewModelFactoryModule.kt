@@ -6,7 +6,7 @@ import dagger.Binds
 import dagger.Module
 
 /**
- * Created by Mohammad Yousuf on Nov, 2019
+ * Created by Mohammad Yousuf on August, 2020
  *
  */
 @Module
