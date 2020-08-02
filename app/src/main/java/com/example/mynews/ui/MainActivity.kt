@@ -36,6 +36,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         if (savedInstanceState == null){
             openFragment(HomeFragment())
+            setToolbarTitle("Home")
             mMainBinding.navView.setCheckedItem(R.id.nav_home)
         }
     }
@@ -50,9 +51,18 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
-            R.id.nav_home -> openFragment(HomeFragment())
-            R.id.nav_world -> openFragment(WorldFragment())
-            R.id.nav_science -> openFragment(ScienceFragment())
+            R.id.nav_home -> {
+                openFragment(HomeFragment())
+                setToolbarTitle("Home")
+            }
+            R.id.nav_world -> {
+                openFragment(WorldFragment())
+                setToolbarTitle("World")
+            }
+            R.id.nav_science -> {
+                openFragment(ScienceFragment())
+                setToolbarTitle("Science")
+            }
         }
         mMainBinding.drawerLayout.closeDrawer(GravityCompat.START)
         return true
@@ -61,6 +71,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private fun openFragment(fragment: Fragment){
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragment_container, fragment).commit()
+    }
+
+    private fun setToolbarTitle(title: String){
+        toolbar.title = title
     }
 
 }
