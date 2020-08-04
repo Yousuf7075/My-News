@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/color_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/home_itemIV"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:src="@drawable/ic_launcher_background"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/cover_picture" />
+        <TextView
+            android:id="@+id/home_item_titleTV"
+            app:layout_constraintTop_toBottomOf="@id/home_itemIV"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/nasa_astronauts_make_landmark_splashdown"
+            android:textSize="@dimen/_18ssp"
+            android:maxLines="2"/>
+        <TextView
+            android:id="@+id/home_item_hourTV"
+            app:layout_constraintTop_toBottomOf="@id/home_item_titleTV"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_1_hour_ago"
+            android:textSize="@dimen/_12ssp"
+            android:layout_marginStart="10dp"
+            android:paddingBottom="5dp"/>
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/line_before_category"
+            app:layout_constraintTop_toBottomOf="@id/home_item_titleTV"
+            app:layout_constraintStart_toEndOf="@id/home_item_hourTV"
+            android:layout_width="2dp"
+            android:layout_height="12dp"
+            android:background="#534E4E"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"/>
+        <TextView
+            android:id="@+id/category_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/home_item_titleTV"
+            app:layout_constraintStart_toEndOf="@id/home_item_hourTV"
+            android:textSize="@dimen/_12ssp"
+            android:text="@string/science"
+            android:textColor="@color/colorAccent"
+            android:layout_marginStart="12dp"
+            android:paddingBottom="5dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
