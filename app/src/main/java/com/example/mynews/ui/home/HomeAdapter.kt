@@ -11,7 +11,7 @@ import com.example.mynews.ui.home.model.Result
 
 class HomeAdapter(private val context: Context, private val homeItems: ArrayList<Result>): RecyclerView.Adapter<HomeViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeViewHolder {
-        val layoutInflater = LayoutInflater.from(context)
+        val layoutInflater = LayoutInflater.from(parent.context)
         val homeItemBinding: HomeItemRowBinding = DataBindingUtil
             .inflate(layoutInflater, R.layout.home_item_row, parent, false)
         return HomeViewHolder(homeItemBinding)
